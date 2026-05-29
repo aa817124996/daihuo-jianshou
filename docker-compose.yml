@@ -6,14 +6,11 @@ services:
     container_name: daihuo-jianshou
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "80:3000"
     volumes:
       - sqlite_data:/app/data
     environment:
       - NODE_ENV=production
-    # Add your API keys below:
-    #   - FAL_AI_KEY=xxx
-    #   - VOLCENGINE_KEY=xxx
 
 volumes:
   sqlite_data:
